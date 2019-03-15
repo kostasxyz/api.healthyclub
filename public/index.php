@@ -9,6 +9,10 @@
 
 define('LARAVEL_START', microtime(true));
 
+// @TODO: add cors service 
+header('Access-Control-Allow-Origin: *');  
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization');
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader

@@ -18,7 +18,7 @@
                             @if ($plan->description)
                                 <p>{{ $plan->description }}</p>
                             @endif
-                            @if (!Auth::user()->subscribedToPlan($plan->braintree_plan, 'main'))
+                            @if (Auth::user() && !Auth::user()->subscribedToPlan($plan->braintree_plan, 'main'))
                                 <a href="{{ url('/plan', $plan->slug) }}" class="btn btn-lg btn-block btn-primary">Get started</a>
                             @endif
                           </div>
